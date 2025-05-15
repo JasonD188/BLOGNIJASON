@@ -1,0 +1,248 @@
+:host {
+  display: block;
+  position: relative;
+  margin-left: 20px;
+  font-family: 'Google Sans', system-ui, -apple-system, sans-serif;
+}
+
+.auth-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 8px 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.auth-container:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.google-sign-in-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  background: #fff;
+  color: #333;
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.google-sign-in-btn:hover {
+  background: #f8f8f8;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.google-sign-in-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  backdrop-filter: blur(5px);
+}
+
+.user-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.user-name {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.user-email {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.verification-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  border-radius: 12px;
+  margin-top: 4px;
+}
+
+.unverified {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.verified {
+  background: #d4edda;
+  color: #155724;
+}
+
+.verify-email-btn {
+  padding: 4px 10px;
+  background: #4da6ff;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+}
+
+.verify-email-btn:hover {
+  background: #3a8de6;
+  transform: translateY(-1px);
+}
+
+.sign-out-btn {
+  padding: 8px 15px;
+  background: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.sign-out-btn:hover {
+  background: #cc0000;
+  transform: translateY(-1px);
+}
+
+.error-message {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 15px 20px;
+  background: #ff4444;
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.3s ease-out;
+  z-index: 1000;
+}
+
+.success-message {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 15px 20px;
+  background: #4caf50;
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.3s ease-out;
+  z-index: 1000;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  :host {
+    margin-left: 10px;
+  }
+
+  .auth-container {
+    padding: 6px 12px;
+  }
+
+  .google-sign-in-btn {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+
+  .user-info {
+    padding: 8px 12px;
+  }
+
+  .user-avatar {
+    width: 32px;
+    height: 32px;
+  }
+
+  .user-name {
+    font-size: 0.85rem;
+  }
+
+  .user-email {
+    font-size: 0.75rem;
+  }
+
+  .sign-out-btn {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  :host {
+    margin-left: 5px;
+  }
+
+  .auth-container {
+    padding: 4px 8px;
+  }
+
+  .google-sign-in-btn {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+
+  .user-info {
+    padding: 6px 10px;
+  }
+
+  .user-avatar {
+    width: 28px;
+    height: 28px;
+  }
+
+  .user-name {
+    font-size: 0.8rem;
+  }
+
+  .user-email {
+    font-size: 0.7rem;
+  }
+
+  .sign-out-btn {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+} 
