@@ -1,0 +1,280 @@
+body {
+    background-color: white;
+    padding: 1.5rem;
+}
+.content-container,
+.vloggers-container {
+max-width: 1024px;
+max-width: 1024px;
+margin: 0 auto;
+background-color: white;
+background-color: white;
+box-shadow: 0 10px 6x rgba(0, 0, 0, 0.1);
+padding: 2remm;
+border-radius: 0.75rem;
+margin-top: 30px;
+}
+.category-badge {
+   background-color: #3b82f6;
+   color: white;
+   padding: 0.25rem 1rem;
+   border-radius: 9999px;
+   font-size: 0.875rem;
+   font-white: 600;
+}
+.grid-container {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 1rem;
+   margin-top: 1rem;
+}
+.main-image-container {
+   grid-column: span 2;
+}
+.food-image {
+   width: 100%;
+   border-radius: 0.75rem;
+}
+.food-title {
+   font-size: 1.125rem;
+   font-weight: 700;
+   margin-top: 0.5rem;
+}
+.autor-name {
+   font-size: 0.875rem;
+   color: #6b7280;
+}
+.side-content  {
+display: flex;
+flex-direction: column;
+gap: 1rem;
+}
+.food-item {
+   display: flex;
+   gap: 0.5rem;
+}
+.food-thumbnail {
+   width: 5rem;
+   height: 5rem;
+   border-radius: 0.75rem;
+}
+.food-details {
+   display: flex;
+   flex-direction: column;
+}
+.food-category {
+   color: #10b981;
+   font-size: 0.75rem;
+   font-white: 700;
+}
+.food-item-title {
+font-size: 1rem;
+font-white: 700;
+}
+.food-autor {
+   font-size: 0.75rem;
+   color: #6b7280;
+}
+.vloggers-title {
+   font-size: 1.125rem;
+   font-weight: 700;
+}
+.vloggers-description {
+   font-size: 0.875rem;
+   color: #4b5563;
+   margin-top: 0.5rem;
+}
+.vloggers-grid {
+   discplay: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 1rem;
+   margin-top: 1.5rem;
+}
+.vlogger-item {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   background-color: #3b82f6;
+   padding: 1rem;
+   border-radius: 0.75rem;
+}
+.vlogger-image {
+width: 4rem;
+height: 4rem;
+background-color: black;
+border-radius: 9999px;
+background-size: cover;
+background-position: center;
+}
+.vlogger-name {
+   font-size: 0.875rem;
+   font-weight: 600;
+   margin-top: 0.5rem;
+}
+#prev {
+   position: absolute;
+   left: 0;
+   top: 50%;
+   transform: translateY(-50%);
+   background-color: rgba(0, 0, 0, 0.3);
+   color: white;
+   padding: 12px;
+   border-radius: 50%;
+   cursor: pointer;
+   border: none;
+   fontsize: 24px;
+   transition: background-color 0.3ease;
+}
+button:hover {
+   background-color: rgba(0, 0, 0, 0.8);
+}
+button:focus {
+   outline: none;
+}
+#prev {
+   left: 10px;
+}
+#next {
+   position: absolute;
+   right: 0;
+   top: 50%;
+   transform: translateY(-50%);
+   background-color: rgba(0, 0, 0, 0.3);
+   color: white;
+   padding: 12px;
+   border-radius: 50%;
+   cursor: pointer;
+   border: none;
+   fontsize: 24px;
+   transition: background-color 0.3ease;, transform 0.3ease;
+}
+#slider {
+   overflow-x: hidden;
+}
+#slider::-webkit-scrollbar {
+   display: none;
+}
+.nav-bar {
+    background-color: #fff;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+   
+    top: 0;
+    margin-top: 10px;
+    margin-left: 800px;
+  }
+  
+  .tab {
+    color: #7d5473;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-top: -20px;
+  }
+  
+  .tab:hover {
+    background-color: #e4a9c3;
+    color: #fff;
+  }
+  input[type="text"]{
+  border-radius: 6px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.1);
+  border-width: 1px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  flex-shrink: 0;
+  width: 200px;
+  position: relative;
+  color: white;
+  background-color: #333;
+  position: absolute;
+  margin-top: -45px;
+  margin-left: 1223px;
+}
+.search-form {
+  margin-top: -15px;
+  margin-left: 20px;
+}
+#rars {
+  right: 11;
+  margin-top: 20px;
+  position: absolute;
+margin-top: -45px;
+}
+.texts {
+  color: rgba(0, 0, 0, 0.5);
+  text-align: left;
+  font-family: "Roboto-Regular", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  
+  flex: 1;
+  margin
+}
+ 
+ /* Keyframes for the fadeInUp animation */
+ 
+ 
+
+@media (min-width: 300px) and (max-width: 768px) {
+   .grid-container {
+       grid-template-columns: 1fr;
+       gap: 1rem;
+   }
+   .main-image-container {
+       grid-column: 1;
+       justify-content: center;
+       align-items: center;
+   }
+   .food-image {
+       width: 100%;
+       height: auto;
+   }
+   .food-thumbnail {
+       width: 100%;
+       height: auto;
+   }
+   .food-item {
+       flex-direction: column;
+   }
+   .vloggers-grid {
+       grid-template-columns: repeat(2, 1fr);
+       gap: 1rem;
+   }
+   #prev, 
+   #next {
+       padding: 8px;
+       font-size: 18px;   
+   }
+   .category-badge {
+       font-size: 0.75rem;
+       padding: 0.25rem 0.75rem;
+   }
+   .food-title {
+       font-size: 1rem;
+       margin-bottom: 10px;
+   }
+   .food-autor,
+   .autor-name {
+font-size: 0.75rem;
+   }
+   .vloggers-title {
+   font-size: 1rem;
+   }
+   .vloggers-description {
+       font-size: 0.75rem;
+   }
+   .vlogger-name {
+       font-size: 0.75rem;
+   }
+}

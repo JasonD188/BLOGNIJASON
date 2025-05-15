@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Filipino Recipes</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f8f8f8;
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      padding: 1.5rem 1rem;
+      background-color: white;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .hero-image img {
+      width: 100%;
+      max-height: 200px;
+      object-fit: cover;
+    }
+
+    h1 {
+      margin: 0.5rem 0;
+      font-size: 2rem;
+    }
+
+    .instructions-text {
+      color: #666;
+      font-size: 0.95rem;
+    }
+
+    .filter-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 1rem;
+      background-color: #fff;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .filter-buttons button {
+      padding: 0.5rem 1rem;
+      background-color: #eee;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: background 0.3s;
+    }
+
+    .filter-buttons button.active,
+    .filter-buttons button:hover {
+      background-color: #d2d2d2;
+    }
+
+    .recipes-grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1rem;
+      padding: 2rem;
+    }
+
+    .recipe-card-container {
+      background-color: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+      padding-bottom: 1rem;
+    }
+
+    .recipe-card-container:hover {
+      transform: translateY(-5px);
+    }
+
+    .recipe-card-container img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .recipe-card-container h3 {
+      margin: 0;
+      padding: 1rem;
+      font-size: 1rem;
+    }
+
+    .toggle-button {
+      color: #3182ce;
+      margin: 0 1rem;
+      font-size: 1rem;
+      background: none;
+      padding: 0;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .toggle-button:hover {
+      text-decoration: underline;
+    }
+
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.6);
+    }
+
+    .modal-content-box {
+      background-color: #fff;
+      margin: 10% auto;
+      padding: 1.5rem;
+      border-radius: 10px;
+      max-width: 500px;
+      position: relative;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    .modal-content-box h2 {
+      margin-top: 0;
+    }
+
+    .close-modal-btn {
+      color: #aaa;
+      font-size: 24px;
+      font-weight: bold;
+      cursor: pointer;
+      position: absolute;
+      top: 10px;
+      right: 15px;
+    }
+
+    .close-modal-btn:hover {
+      color: #333;
+    }
+
+    .modal-overlay .scrollable-content {
+      max-height: 200px;
+      overflow-y: auto;
+      margin-top: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .flex-container {
+      display: flex;
+      justify-content: space-between;
+      color: #4b5563;
+      margin-top: 0.75rem;
+    }
+    .nav-bar {
+  background-color: #fff;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+ 
+  top: 0;
+  
+  margin-left: 600px;
+}
+
+.tab {
+  color: #7d5473;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin-top: -20px;
+}
+
+.tab:hover {
+  background-color: #e4a9c3;
+  color: #fff;
+}
+input[type="text"]{
+  border-radius: 6px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.1);
+  border-width: 1px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  flex-shrink: 0;
+  width: 200px;
+  position: relative;
+  color: white;
+  background-color: #333;
+  position: absolute;
+  margin-top: -45px;
+  margin-left: 500px;
+}
+.search-form {
+  margin-top: -15px;
+  margin-left: 20px;
+}
+#rar {
+  right: 11;
+  margin-top: 20px;
+  position: absolute;
+}
+.texts {
+  color: rgba(0, 0, 0, 0.5);
+  text-align: left;
+  font-family: "Roboto-Regular", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  
+  flex: 1;
+  margin
+}
+  </style>
+</head>
+<body>
+   <div class="nav-bar">
+    
+        <a href="./index.html" class="tab">HOME</a>
+        <a href="./indexrecipe.html" class="tab">RECIPE</a>
+        <a href="./aboutus.html" class="tab">ABOUT</a>
+        <a href="./CONTACT.html" class="tab">CONTACT</a>
+        <form class="search-form">
+            <input type="texts" id="search" class="textss" name="search" placeholder="Search...">
+        </form>
+        <button><i class="fas fa-search"id="rar"></i></button>
+
+</div>
+  <header>
+    <div class="hero-image">
+      <img src="./picturesblog/main.jpg" alt="Breakfast Hero" />
+    </div>
+    <h1>FILIPINO RECIPES</h1>
+    <p class="instructions-text">
+      THIS FILIPINO ALL RECIPES 
+    </p>
+  </header>
+
+  <nav class="filter-buttons">
+    <button class="active">All Recipes</button>
+    <button>SNACKS</button>
+    <button>MEALS</button>
+    <button>Under 30 Mins</button>
+    <button>Under 15 Mins</button>
+    <button>DESSERTS&BEVERAGES</button>
+    <button>Vegetarian</button>
+    <button>MOST POPULAR</button>
+  </nav>
+
+  <main class="recipes-grid-container">
+
+
+    <div class="recipe-card-container" data-category="high-protein">
+      <img src="./picturerecipe/adborece.jpg" alt="Adobo"/>
+      <h3>ADOBO</h3>
+      <div class="toggle-button" data-target="adoboModal">See More</div>
+    </div>
+
+
+    <div id="adoboModal" class="modal-overlay">
+      <div class="modal-content-box">
+        <span class="close-modal-btn">&times;</span>
+        <h2>Adobo Ingredients</h2>
+        <div class="scrollable-content">
+          <p>
+            1 lb chicken, cut into pieces<br>
+            2 tbsp soy sauce<br>
+            1 onion, chopped<br>
+            4 garlic cloves, minced<br>
+            1 bay leaf<br>
+            1 tbsp peppercorns<br>
+            1 tbsp vinegar<br>
+            1 cup water<br>
+            1 tbsp oil
+          </p>
+        </div>
+        <div class="flex-container">
+          <span>&#x1F551; 1 hr</span>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="recipe-card-container" data-category="vegetarian">
+      <img src="./picturerecipe/kaldereta.jpg" alt="Kaldereta"/>
+      <h3>KALDERETA</h3>
+      <div class="toggle-button" data-target="kalderetaModal">See More</div>
+    </div>
+
+    <div id="kalderetaModal" class="modal-overlay">
+      <div class="modal-content-box">
+        <span class="close-modal-btn">&times;</span>
+        <h2>Kaldereta Ingredients</h2>
+        <div class="scrollable-content">
+          <p>
+            1 lb beef, cut into cubes<br>
+            2 tbsp soy sauce<br>
+            1 onion, chopped<br>
+            2 tomatoes, chopped<br>
+            1 cup beef broth<br>
+            1 cup tomato sauce<br>
+            1 carrot, sliced<br>
+            1 potato, sliced<br>
+            1 red bell pepper<br>
+            1 green bell pepper<br>
+            ½ cup green peas<br>
+            2 tbsp fish sauce
+          </p>
+        </div>
+        <div class="flex-container">
+          <span>&#x1F551; 2 hrs</span>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="recipe-card-container" data-category="vegan under-30-mins">
+      <img src="./picturerecipe/menudo.jpg" alt="Menudo"/>
+      <h3>MENUDO</h3>
+      <div class="toggle-button" data-target="menudoModal1">See More</div>
+    </div>
+
+ 
+    <div id="menudoModal1" class="modal-overlay">
+      <div class="modal-content-box">
+        <span class="close-modal-btn">&times;</span>
+        <h2>Menudo Ingredients</h2>
+        <div class="scrollable-content">
+          <p>
+            1 lb pork, cubed<br>
+            ¼ lb pork liver, cubed (optional)<br>
+            2 tbsp soy sauce<br>
+            2 tbsp calamansi or lemon juice<br>
+            ½ tsp pepper<br>
+            2 tbsp oil<br>
+            1 onion, chopped<br>
+            3 garlic cloves, minced<br>
+            2 tomatoes, chopped<br>
+            1 tbsp tomato paste<br>
+            1 cup tomato sauce<br>
+            1 cup water or broth<br>
+            1 tbsp fish sauce or salt<br>
+            1 tbsp sugar<br>
+            1 potato, cubed<br>
+            1 carrot, cubed<br>
+            ½ cup green peas<br>
+            ½ red bell pepper<br>
+            ½ green bell pepper
+          </p>
+        </div>
+        <div class="flex-container">
+          <span>&#x1F551; 45 mins</span>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="recipe-card-container" data-category="vegan under-30-mins">
+      <img src="./picturerecipe/nilagang baboy.jpg" alt="Nilagang Baboy"/>
+      <h3>NILAGANG BABOY</h3>
+      <div class="toggle-button" data-target="nilagaModal">See More</div>
+    </div>
+
+  
+    <div id="nilagaModal" class="modal-overlay">
+      <div class="modal-content-box">
+        <span class="close-modal-btn">&times;</span>
+        <h2>Nilagang Baboy Ingredients</h2>
+        <div class="scrollable-content">
+          <p>
+            8 cups water<br>
+            1 onion<br>
+            2-3 potatoes<br>
+            2-3 saba bananas (optional)<br>
+            1 corn (optional)<br>
+            1 bunch pechay or cabbage<br>
+            10 green beans<br>
+            1 tsp peppercorns<br>
+            1-2 tbsp fish sauce or salt<br>
+            1 bouillon cube (optional)
+          </p>
+        </div>
+        <div class="flex-container">
+          <span>&#x1F551; 45 mins</span>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="recipe-card-container" data-category="vegan low-carb">
+      <img src="./picturerecipe/sisig.jpg" alt="Sisig"/>
+      <h3>SISIG</h3>
+      <div class="toggle-button" data-target="sisigModal">See More</div>
+    </div>
+
+    
+    <div id="sisigModal" class="modal-overlay">
+      <div class="modal-content-box">
+        <span class="close-modal-btn">&times;</span>
+        <h2>Sisig Ingredients</h2>
+        <div class="scrollable-content">
+          <p>
+            1 lb pork belly, chopped<br>
+            1 onion, chopped<br>
+            2 cloves garlic, minced<br>
+            2 tbsp soy sauce<br>
+            1 tbsp vinegar<br>
+            1 chili pepper, minced<br>
+            1 egg<br>
+            1 tbsp mayonnaise<br>
+            Salt and pepper to taste
+          </p>
+        </div>
+        <div class="flex-container">
+          <span>&#x1F551; 1 hr</span>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+ 
+    const filterButtons = document.querySelectorAll(".filter-buttons button");
+    const recipeCards = document.querySelectorAll(".recipe-card-container");
+
+    filterButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        filterButtons.forEach(btn => btn.classList.remove("active"));
+        button.classList.add("active");
+
+        const filter = button.textContent.toLowerCase().replace(/\s/g, '-');
+        recipeCards.forEach(card => {
+          const categories = card.dataset.category?.split(" ") || [];
+          if (filter === "all-recipes" || categories.includes(filter)) {
+            card.style.display = "block";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      });
+    });
+
+  
+    document.querySelectorAll('.toggle-button').forEach(button => {
+      button.addEventListener('click', () => {
+        const modal = document.getElementById(button.dataset.target);
+        if (modal) modal.style.display = "block";
+      });
+    });
+
+    document.querySelectorAll('.close-modal-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.closest('.modal-overlay').style.display = 'none';
+      });
+    });
+
+    window.addEventListener('click', (e) => {
+      if (e.target.classList.contains('modal-overlay')) {
+        e.target.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>

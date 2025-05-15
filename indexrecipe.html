@@ -1,0 +1,506 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./framestyle/recipe.style.css">
+    <script type="module" src="./components/recipe.js"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <title>Recipe Slider</title>
+   
+</head>
+<body>
+    <div class="nav-bar">
+    
+        <a href="./index.html" class="tab">HOME</a>
+        <a href="./indexrecipe.html" class="tab">RECIPE</a>
+        <a href="./aboutus.html" class="tab">ABOUT</a>
+        <a href="./CONTACT.html" class="tab">CONTACT</a>
+        <form class="search-form">
+            <input type="text" id="search" class="texts" name="search" placeholder="Search...">
+        </form>
+        <button><i class="fas fa-search"id="rar"></i></button>
+
+</div>
+    <h1 class = "bounce">RECIPE</h1> 
+<div class="flex justify-center items-center min-h-screen">
+    
+    <div class="relative w-full max-w-5xl overflow-hidden mt-[-200px]">
+        <button id="prev" class="custom-button">&#10094;</button>
+        <div id="slider" class="flex space-x-6 overflow-x-auto scrollbar-hide">
+            
+            <div class="custom-card">
+                <img src="./picturerecipe/454017119_1076749380451249_6564738363577833806_n.jpg" alt="ADOBO" class="custom-image">
+                <h3 class="text">ADOBO</h3>
+                
+                <button class="toggle_btn">See More</button>
+                <p class="text-gray-500 hidden scrollbar">
+                    2 lbs (1 kg) chicken thighs and drumsticks (or pork belly, if preferred)<br>
+                    1/2 cup soy sauce<br>
+                    1/4 cup vinegar (white or cane vinegar)<br>
+                    5 cloves garlic, minced<br>
+                    1 teaspoon black peppercorns (whole or crushed)<br>
+                    2-3 bay leaves<br>
+                    1 tablespoon brown sugar (optional)<br>
+                    1 cup water<br>
+                    2 tablespoons cooking oil<br>
+                    Salt and pepper to taste<br>
+                    1 small onion, sliced (optional)
+                </p>
+                <div class="flex">
+                    <span>&#x1F551; 1hr/40 mins</span>
+                </div>
+                <div class="custom-flex">
+                    <a href="https://www.youtube.com/watch?v=QPhoeQ_7Ymc">Video Tutorial</a>
+                </div>
+            </div>
+            <div class="custom-card">
+                <img src="./picturerecipe/379465168_855849382784208_6739648483648362377_n.jpg" alt="sinigang" class="custom-image">
+                <h3 class="text">SINIGANG</h3>
+                <button class="toggle_btn">See More</button>
+                <p class="text-gray-500 hidden scrollbar">
+                    1 kg (2.2 lbs) pork belly, pork ribs, or pork shoulder<br>
+                    8 cups water<br>
+                    1 large tomato, sliced<br>
+                    1 onion, sliced<br>
+                    2-3 pieces taro (gabi), peeled and cubed (optional, for a thicker broth)<br>
+                    1 radish (labanos), sliced thinly<br>
+                    10 pieces long beans (sitaw), cut into 2-inch pieces<br>
+                    1 cup water spinach (kangkong) or chili leaves<br>
+                    2 pieces green chili (siling haba) (optional, for mild spice)<br>
+                    1-2 eggplants, sliced (optional)<br>
+                    1 sachet sinigang mix or 10 pieces tamarind (boiled and mashed for extract)<br>
+                    Salt and pepper to taste
+                </p>
+                <div class="flex">
+                    <span>&#x1F551; 1hr/45 mins</span>
+                </div>
+                <div class="custom-flex">
+                    <a href="https://www.youtube.com/watch?v=lAbhpac9MVc">Video Tutorial</a>
+                </div>
+            </div>
+            <div class="custom-card">
+                <img src="./picturerecipe/nilagang baboy.jpg" alt="boiledporksoup"  class="custom-image">
+                <h3 class="text">BOILED PORK SOUP</h3>
+                <button class="toggle_btn">See More</button>
+                <p class="text-gray-500 hidden scrollbar">
+                    1 kg (2.2 lbs) pork (pork belly, ribs, or shoulder)<br>
+                    8 cups water<br>
+                    1 onion, quartered<br>
+                    2-3 potatoes, peeled and quartered<br>
+                    2-3 saba bananas, sliced (optional but adds sweetness)<br>
+                    1 corn on the cob, cut into 3 pieces (optional)<br>
+                    1 bunch pechay or cabbage, chopped<br>
+                    10 pieces green beans (or baguio beans)<br>
+                    1 teaspoon whole black peppercorns<br>
+                    1-2 tablespoons fish sauce or salt (to taste)<br>
+                    1 beef bouillon cube (optional, for extra flavor)
+                </p>
+                <div class="flex">
+                    <span>&#x1F551; 1hr/5 mins</span>
+                </div>
+                <div class="custom-flex">
+                    <a href="https://www.youtube.com/watch?v=5etQEbP0ZwE">Video Tutorial</a>
+                </div>
+            </div>
+            <div class="custom-card">
+                <img src="./picturerecipe/sisig.jpg" alt="porksisig"  class="custom-image">
+                <h3 class="text">PORK SISIG</h3>
+                <button class="toggle_btn">See More</button>
+                <p class="text-gray-500 hidden scrollbar">
+                    500g (1 lb) pork belly (or pork face/ears for traditional sisig)<br>
+                    1/2 cup chicken liver, chopped (optional but adds richness)<br>
+                    1 onion, finely chopped<br>
+                    2 cloves garlic, minced<br>
+                    2 tablespoons soy sauce<br>
+                    1 tablespoon calamansi juice (or lemon juice)<br>
+                    1 teaspoon salt<br>
+                    1/2 teaspoon black pepper<br>
+                    1/2 teaspoon chili flakes (adjust to taste)<br>
+                    1 green chili (siling haba), chopped<br>
+                    1 red chili (siling labuyo), chopped (optional, for extra heat)<br>
+                    1 raw egg (for serving, optional)<br>
+                    2 tablespoons mayonnaise (optional, for a creamy twist)<br>
+                    2 tablespoons butter or margarine<br>
+                    Cooking oil for frying
+                </p>
+                <div class="flex">
+                    <span>&#x1F551; 1hr/5 mins</span>
+                </div>
+                <div class="custom-flex">
+                    <a href="https://www.youtube.com/watch?v=aFucJVvDFpo">Video Tutorial</a>
+                </div>
+            </div>
+            <div class="custom-card">
+                <img src="./picturerecipe/kaldereta.jpg" alt="kaldereta"  class="custom-image">
+                <h3 class="text">KALDERETA</h3>
+                <button class="toggle_btn">See More</button>
+                <p class="text-gray-500 hidden scrollbar">
+                    1 kg (2.2 lbs) beef (cut into cubes)<br>
+                    2 tablespoons oil<br>
+                    1 onion, chopped<br>
+                    5 cloves garlic, minced<br>
+                    2 large tomatoes, chopped<br>
+                    1 large carrot, peeled and sliced<br>
+                    1 large potato, peeled and sliced<br>
+                    1/2 cup bell peppers (red or green), chopped<br>
+                    1/2 cup green olives (optional, for that distinct flavor)<br>
+                    1/2 cup liver spread (or mashed chicken liver)<br>
+                    1/2 cup tomato sauce<br>
+                    2 tablespoons soy sauce<br>
+                    1 cup beef broth or water<br>
+                    1 teaspoon paprika (optional, for a smoky flavor)<br>
+                    2-3 bay leaves<br>
+                    1 tablespoon sugar (optional, to balance the acidity)<br>
+                    Salt and pepper to taste<br>
+                    1/2 cup frozen peas (optional)<br>
+                    1/4 cup cheese, grated (optional for a creamy finish)<br>
+                    1/4 cup cooking oil
+                </p>
+                <div class="flex">
+                    <span>&#x1F551; 2hrs</span>
+                </div>
+                <div class="custom-flex">
+                    <a href="https://www.youtube.com/watch?v=2n2772QdJgY">Video Tutorial</a>
+                </div>
+            </div>
+            <div class="custom-card">
+                <img src="./picturerecipe/menudo.jpg" alt="menudo"  class="custom-image">
+                <h3 class="text">MENUDO</h3>
+                <button class="toggle_btn">See More</button>
+                <p class="text-gray-500 hidden scrollbar">
+                    1 lb (½ kg) pork, cubed (kasim or liempo)<br>
+                    ¼ lb (100g) pork liver, cubed (optional but recommended)<br>
+                    2 tbsp soy sauce<br>
+                    2 tbsp calamansi juice (or lemon juice)<br>
+                    ½ tsp black pepper<br>
+                    2 tbsp cooking oil<br>
+                    1 medium onion, chopped<br>
+                    3 cloves garlic, minced<br>
+                    2 medium tomatoes, chopped<br>
+                    1 tbsp tomato paste (optional, for richer flavor)<br>
+                    1 cup tomato sauce<br>
+                    1 cup water (or pork broth)<br>
+                    1 tbsp fish sauce (patis) or salt, to taste<br>
+                    1 tbsp sugar (optional, to balance acidity)<br>
+                    1 medium potato, cubed<br>
+                    1 medium carrot, cubed<br>
+                    ½ cup green peas<br>
+                    ½ red bell pepper, chopped<br>
+                    ½ green bell pepper, chopped
+                </p>
+                <div class="flex">
+                    <span>&#x1F551; 45mins</span>
+                </div>
+                <div class="custom-flex">
+                    <a href="https://www.youtube.com/watch?v=mhdQUSXitLU">Video Tutorial</a>
+                </div>
+            </div>
+            <button class="view" id="view-all-btn">VIEW ALL RECIPES</button>     
+            <button id="next" class="custom-buttonn">&#10095;</button>
+  </div>
+        </div>
+        </div>
+        </div>
+       
+
+    
+    <div class="containerr">
+        <div class="left">
+            <div class="banner">THE LATEST & GREATEST</div>
+            <img src="./picturesblog/main.jpg" alt="Dish" class="image">
+            <div class="title">ELEVATED COMFORT FOOD</div>
+            <p class="description">
+              
+            </p>
+        </div>
+        <div class="right">
+            <div class="recipes">
+                <h2 class="tre">Trending Recipes</h2>
+                <div class="recipe">
+                    <p>"I've been making this kare-kare for over 15 years, perfecting its rich, peanut sauce and tender meat for that classic, comforting taste."</p>
+                    <img src="./picturerecipe/kare-kare.gif" alt="Recipe">
+                </div>
+                <div class="recipe">
+                    <p>"Adobo is a delicious Filipino dish made with meat braised in a savory blend of soy sauce, vinegar, garlic, and spices."</p>
+                    <img src="./picturerecipe/adborece.jpg" alt="Recipe">
+                </div>
+                <div class="recipe">
+                    <p>"Menudo is a hearty Filipino stew made with pork, liver, potatoes, and carrots simmered in a rich tomato-based sauce."</p>
+                    <img src="./picturerecipe/Copy-of-Pork-Menudo-1.png" alt="Recipe">
+                </div>
+             
+                
+            </div>
+        </div>
+    </div>
+    <div class="containrer">
+        <h1 class="heading">THE 5 BEST TRADITIONAL FILIPINO FOOD</h1>
+        
+        <div class="food-list">
+        
+            <div class="food-item">
+                <img src="lumpia.jpg" alt="Lumpiang Shanghai" class="food-image">
+                <div class="food-info">
+                    <h2 class="food-title">Lumpiang Shanghai</h2>
+                    <p class="food-description"></p>
+                </div>
+            </div>
+
+      
+            <div class="food-item">
+                <img src="pancit.jpg" alt="Pancit" class="food-image">
+                <div class="food-info">
+                    <h2 class="food-title">Pancit</h2>
+                    <p class="food-description"></p>
+                </div>
+            </div>
+
+
+            <div class="food-item">
+                <img src="sinigang.jpg" alt="Sinigang" class="food-image">
+                <div class="food-info">
+                    <h2 class="food-title">Sinigang</h2>
+                    <p class="food-description"></p>
+                </div>
+            </div>
+
+       
+            <div class="food-item">
+                <img src="adobo.jpg" alt="Adobo" class="food-image">
+                <div class="food-info">
+                    <h2 class="food-title">Adobo</h2>
+                    <p class="food-description"></p>
+                </div>
+            </div>
+
+
+            <div class="food-item">
+                <img src="sisig.jpg" alt="Sisig" class="food-image">
+                <div class="food-info">
+                    <h2 class="food-title">Sisig</h2>
+                    <p class="food-description"></p>
+                </div>
+            </div>
+        </div>
+
+     
+        <div class="cta">
+            <p class="cta-text">Experience the familiar tastes of home and family!</p>
+            <a href="#" class="cta-link">VISIT US!</a>
+        </div>
+        
+    </div>
+    <div class="containrraer">
+        <h1 class="heading">THE 5 BEST TRADITIONAL FILIPINO FOOD</h1>
+        
+        <div class="food-list">
+     
+            <div class="food-item">
+                <img src="lumpia.jpg" alt="Lumpiang Shanghai" class="food-image">
+                <div class="food-info">
+                    <h2 class="food-title">Lumpiang Shanghai</h2>
+                    <p class="food-description"></p>
+                </div>
+            </div>
+
+   
+            <div class="food-item">
+                <img src="pancit.jpg" alt="Pancit" class="food-image">
+                <div class="food-info">
+                    <h2 class="food-title">Pancit</h2>
+                    <p class="food-description"></p>
+                </div>
+            </div>
+
+   
+            <div class="food-item">
+                <img src="sinigang.jpg" alt="Sinigang" class="food-image">
+                <div class="food-info">
+                    <h2 class="food-title">Sinigang</h2>
+                    <p class="food-description"></p>
+                </div>
+            </div>
+
+
+            <div class="food-item">
+                <img src="adobo.jpg" alt="Adobo" class="food-image">
+                <div class="food-info">
+                    <h2 class="food-title">Adobo</h2>
+                    <p class="food-description"></p>
+                </div>
+            </div>
+
+     
+            <div class="food-item">
+                <img src="sisig.jpg" alt="Sisig" class="food-image">
+                <div class="food-info">
+                    <h2 class="food-title">Sisig</h2>
+                    <p class="food-description"></p>
+                </div>
+            </div>
+        </div>
+
+     
+        <div class="cta">
+            <p class="cta-text">Experience the familiar tastes of home and family!</p>
+            <a href="#" class="cta-link">VISIT US!</a>
+        </div>
+    </div>
+    <div class="containrrreaer">
+        <h1 class="heading">THE 5 BEST TRADITIONAL FILIPINO FOOD</h1>
+        
+        <div class="food-list">
+       
+            <div class="food-item">
+                <img src="lumpia.jpg" alt="Lumpiang Shanghai" class="food-image">
+                <div class="food-info">
+                    <h2 class="food-title">Lumpiang Shanghai</h2>
+                    <p class="food-description"></p>
+                </div>
+            </div>
+
+
+            <div class="food-item">
+                <img src="pancit.jpg" alt="Pancit" class="food-image">
+                <div class="food-info">
+                    <h2 class="food-title">Pancit</h2>
+                    <p class="food-description"></p>
+                </div>
+            </div>
+
+
+            <div class="food-item">
+                <img src="sinigang.jpg" alt="Sinigang" class="food-image">
+                <div class="food-info">
+                    <h2 class="food-title">Sinigang</h2>
+                    <p class="food-description"></p>
+                </div>
+            </div>
+
+
+            <div class="food-item">
+                <img src="adobo.jpg" alt="Adobo" class="food-image">
+                <div class="food-info">
+                    <h2 class="food-title">Adobo</h2>
+                    <p class="food-description"></p>
+                </div>
+            </div>
+
+
+            <div class="food-item">
+                <img src="sisig.jpg" alt="Sisig" class="food-image">
+                <div class="food-info">
+                    <h2 class="food-title">Sisig</h2>
+                    <p class="food-description"></p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="cta">
+            <p class="cta-text">Experience the familiar tastes of home and family!</p>
+            <a href="#" class="cta-link">VISIT US!</a>
+        </div>
+    </div>
+
+            <div class="contaiqner">
+    <!-- Left Side: Video and Creator Info -->
+    <div class="left-section">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/sEcTCDZAIbs?si=DEvoyc4gg1OogFlM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <a href="./BLOG.html" class="blog">FOODBLOGERS</a>
+    </div>
+  
+    <!-- Right Side: Trending Recipes -->
+    <div class="right-section">
+      <h2>Trending BLOGER Recipes</h2>
+
+      <div class="recipse">
+        <p>"I've been making this kare-kare for over 15 years, perfecting its rich, peanut sauce and tender meat for that classic, comforting taste."</p>
+        <img src="kare-kare.jpg" alt="Kare Kare" />
+      </div>
+
+      <div class="recipse">
+        <p>"Adobo is a delicious Filipino dish made with meat braised in a savory blend of soy sauce, vinegar, garlic, and spices."</p>
+        <img src="adobo.jpg" alt="Adobo" />
+      </div>
+
+      <div class="recipse">
+        <p>"Menudo is a hearty Filipino stew made with pork, liver, potatoes, and carrots simmered in a rich tomato-based sauce."</p>
+        <img src="menudo.jpg" alt="Menudo" />
+      </div>
+
+      <div class="recipse">
+        <p>"Menudo is a hearty Filipino stew made with pork, liver, potatoes, and carrots simmered in a rich tomato-based sauce."</p>
+        <img src="menudo.jpg" alt="Menudo Again" />
+      </div>
+    </div>
+  </div>
+  
+      
+    
+  <footer class="footer">
+           
+    <div class="footer-left">
+      <div class="contact-info">
+        <i class="fas fa-map-marker-alt"></i>
+        <p id="loc">BLk 15 Lot 52 Ph.2 North Ville 4 Brgy, Marilao, 3019 Bulacan PHILIPPHINES</p>
+      </div>
+      <div class="contact-info">
+        <i class="fas fa-phone-alt"></i>
+        <p class="tete">099292972952</p> 
+      </div>
+      <div class="contact-info">
+        <i class="fas fa-phone-alt"></i>
+        <p class="tete">09387043421</p> 
+      </div>
+      <div class="contact-info">
+        <i class="fas fa-envelope"></i>
+        <p class="rrr"><a href="./CONTACT.html" style="color: #4da6ff;">support@Business</a></p>
+      </div>
+    </div>
+  
+    <div class="footer-right">
+      <h3>About the Business</h3>
+      <p>At Sherap's Homemade Kitchenette Lambakin, we bring the warmth of home-cooked Filipino meals to your table. Our passion for authentic flavors, fresh ingredients, and traditional recipes is at the heart of everything we do.</p>
+    </div>
+  
+    <div class="comment-form-wrapper">
+        <div class="typing">Leave a Comment...</div>
+      <form action="#" class="form-comment">
+        <div>
+          <label>Message</label>
+          <textarea rows="3" class="textarea"></textarea>
+        </div>                       
+        <div>
+          <label>Name</label>
+          <input type="texts" class="nme">
+        </div>
+        <div>
+          <label class="ei">Email</label>
+          <input type="email" class="emil">
+        </div>
+        <button type="submit" class="post-comment" id="postCommentBtn">Post Comment</button>
+      </form>
+    </div>
+  
+    <div id="commentPopup" class="comment-popup">
+      <div class="popup-content">
+        <h2>Comment Submitted</h2>
+        <p>Your comment has been successfully posted!</p>
+        <a href="./viewmorecomments.html" target="_blank" class="view-comments-link">View Comments</a>
+        <button id="closePopupBtn" class="close-popup-btn">Close</button>
+      </div>
+    </div>
+  </footer>
+     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script> 
+</body>
+<script>
+  
+
+</script>
+ 
+</html> 

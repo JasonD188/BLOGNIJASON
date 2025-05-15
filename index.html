@@ -1,0 +1,395 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="./framestyle/home.style.css">
+        <script type="module" src="./components/home.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+
+    </head>
+    <body>         
+    <header class="header">
+        <main id="recipeModal" style="display: none;">
+           
+            <div class="slider-wrapper">
+              <button id="prev" class="custom-button">&#10094;</button>
+              <div id="slider" class="slider">
+                  <div class="custom-card">
+                     <input type="texst" id="search" class="searxs" name="search" placeholder="Search...">     
+                      <img src="./picturerecipe/sisig.jpg" alt="porksisig"  class="custom-image">
+                      <h3 class="text">PORK SISIG</h3>
+                      <button class="toggle_btn">See More</button>
+                      <p class="text-gray-500 hidden scrollbar">
+                          500g (1 lb) pork belly (or pork face/ears for traditional sisig)<br>
+                          1/2 cup chicken liver, chopped (optional but adds richness)<br>
+                          1 onion, finely chopped<br>
+                          2 cloves garlic, minced<br>
+                          2 tablespoons soy sauce<br>
+                          1 tablespoon calamansi juice (or lemon juice)<br>
+                          1 teaspoon salt<br>
+                          1/2 teaspoon black pepper<br>
+                          1/2 teaspoon chili flakes (adjust to taste)<br>
+                          1 green chili (siling haba), chopped<br>
+                          1 red chili (siling labuyo), chopped (optional, for extra heat)<br>
+                          1 raw egg (for serving, optional)<br>
+                          2 tablespoons mayonnaise (optional, for a creamy twist)<br>
+                          2 tablespoons butter or margarine<br>
+                          Cooking oil for frying
+                      </p>
+                      <div class="flex">
+                          <span>&#x1F551; 1hr/5 mins</span>
+                      </div>
+                      <div class="custom-flex">
+                          <a href="https://www.youtube.com/watch?v=aFucJVvDFpo">Video Tutorial</a>
+                      </div>
+                  </div>
+                  <div class="custom-card">
+                      <img src="./picturerecipe/sisig.jpg" alt="porksisig"  class="custom-image">
+                      <h3 class="text">PORK SISIG</h3>
+                      <button class="toggle_btn">See More</button>
+                      <p class="text-gray-500 hidden scrollbar">
+                          500g (1 lb) pork belly (or pork face/ears for traditional sisig)<br>
+                          1/2 cup chicken liver, chopped (optional but adds richness)<br>
+                          1 onion, finely chopped<br>
+                          2 cloves garlic, minced<br>
+                          2 tablespoons soy sauce<br>
+                          1 tablespoon calamansi juice (or lemon juice)<br>
+                          1 teaspoon salt<br>
+                          1/2 teaspoon black pepper<br>
+                          1/2 teaspoon chili flakes (adjust to taste)<br>
+                          1 green chili (siling haba), chopped<br>
+                          1 red chili (siling labuyo), chopped (optional, for extra heat)<br>
+                          1 raw egg (for serving, optional)<br>
+                          2 tablespoons mayonnaise (optional, for a creamy twist)<br>
+                          2 tablespoons butter or margarine<br>
+                          Cooking oil for frying
+                      </p>
+                      <div class="flex">
+                          <span>&#x1F551; 1hr/5 mins</span>
+                      </div>
+                      <div class="custom-flex">
+                          <a href="https://www.youtube.com/watch?v=aFucJVvDFpo">Video Tutorial</a>
+                      </div>
+                  </div>
+                   <div class="custom-card">
+              <img src="./picturerecipe/sisig.jpg" alt="porksisig"  class="custom-image">
+              <h3 class="text">PORK SISIG</h3>
+              <button class="toggle_btn">See More</button>
+              <p class="text-gray-500 hidden scrollbar">
+                  500g (1 lb) pork belly (or pork face/ears for traditional sisig)<br>
+                  1/2 cup chicken liver, chopped (optional but adds richness)<br>
+                  1 onion, finely chopped<br>
+                  2 cloves garlic, minced<br>
+                  2 tablespoons soy sauce<br>
+                  1 tablespoon calamansi juice (or lemon juice)<br>
+                  1 teaspoon salt<br>
+                  1/2 teaspoon black pepper<br>
+                  1/2 teaspoon chili flakes (adjust to taste)<br>
+                  1 green chili (siling haba), chopped<br>
+                  1 red chili (siling labuyo), chopped (optional, for extra heat)<br>
+                  1 raw egg (for serving, optional)<br>
+                  2 tablespoons mayonnaise (optional, for a creamy twist)<br>
+                  2 tablespoons butter or margarine<br>
+                  Cooking oil for frying
+              </p>
+              <div class="flex">
+                  <span>&#x1F551; 1hr/5 mins</span>
+              </div>
+              <div class="custom-flex">
+                  <a href="https://www.youtube.com/watch?v=aFucJVvDFpo">Video Tutorial</a>
+              </div>
+          </div>
+           <div class="custom-card">
+              <img src="./picturerecipe/sisig.jpg" alt="porksisig"  class="custom-image">
+              <h3 class="text">PORK SISIG</h3>
+              <button class="toggle_btn">See More</button>
+              <p class="text-gray-500 hidden scrollbar">
+                  500g (1 lb) pork belly (or pork face/ears for traditional sisig)<br>
+                  1/2 cup chicken liver, chopped (optional but adds richness)<br>
+                  1 onion, finely chopped<br>
+                  2 cloves garlic, minced<br>
+                  2 tablespoons soy sauce<br>
+                  1 tablespoon calamansi juice (or lemon juice)<br>
+                  1 teaspoon salt<br>
+                  1/2 teaspoon black pepper<br>
+                  1/2 teaspoon chili flakes (adjust to taste)<br>
+                  1 green chili (siling haba), chopped<br>
+                  1 red chili (siling labuyo), chopped (optional, for extra heat)<br>
+                  1 raw egg (for serving, optional)<br>
+                  2 tablespoons mayonnaise (optional, for a creamy twist)<br>
+                  2 tablespoons butter or margarine<br>
+                  Cooking oil for frying
+              </p>
+              <div class="flex">
+                  <span>&#x1F551; 1hr/5 mins</span>
+              </div>
+              <div class="custom-flex">
+                  <a href="https://www.youtube.com/watch?v=aFucJVvDFpo">Video Tutorial</a>
+              </div>
+          </div>
+           <div class="custom-card">
+              <img src="./picturerecipe/sisig.jpg" alt="porksisig"  class="custom-image">
+              <h3 class="text">PORK SISIG</h3>
+              <button class="toggle_btn">See More</button>
+              <p class="text-gray-500 hidden scrollbar">
+                  500g (1 lb) pork belly (or pork face/ears for traditional sisig)<br>
+                  1/2 cup chicken liver, chopped (optional but adds richness)<br>
+                  1 onion, finely chopped<br>
+                  2 cloves garlic, minced<br>
+                  2 tablespoons soy sauce<br>
+                  1 tablespoon calamansi juice (or lemon juice)<br>
+                  1 teaspoon salt<br>
+                  1/2 teaspoon black pepper<br>
+                  1/2 teaspoon chili flakes (adjust to taste)<br>
+                  1 green chili (siling haba), chopped<br>
+                  1 red chili (siling labuyo), chopped (optional, for extra heat)<br>
+                  1 raw egg (for serving, optional)<br>
+                  2 tablespoons mayonnaise (optional, for a creamy twist)<br>
+                  2 tablespoons butter or margarine<br>
+                  Cooking oil for frying
+              </p>
+              <div class="flex">
+                  <span>&#x1F551; 1hr/5 mins</span>
+              </div>
+              <div class="custom-flex">
+                  <a href="https://www.youtube.com/watch?v=aFucJVvDFpo">Video Tutorial</a>
+              </div>
+          </div>
+              </div>
+              <button id="next" class="custom-buttonn">&#10095;</button>
+            </div>    
+        </main>
+           
+    
+            <div class="nav-bar"class="bg- #fff p-[20px] [40px] display: flex align-items: center top-0 m-left-[1000px]">
+                    <a href="./index.html" class="tab">HOME</a>
+                    <a href="./indexrecipe.html" class="tab">RECIPE</a>
+                    <a href="./aboutus.html" class="tab">ABOUT</a>
+                    <a href="./CONTACT.html" class="tab">CONTACT</a>
+                  
+            </div>     
+              <form class="search-form">
+                        <input type="text" id="search" class="texts" name="search" placeholder="Search...">                 
+                    </form>
+                    <i class="fas fa-search"id="rar"></i>   
+                    <div id="popup" class="popup" style="display: none;">
+                        <button>
+                            <img class="users" src="./picturesabout/3.jpg" alt="" width="40" style="border-radius: 50%">
+                        </button>
+                    
+                    </div>       
+            <div class="header-container">
+            <div class="logo">
+                <img src="./pictureshome/LOGO.jpg" alt="Sherap's Logo"class="logo-img">
+            </div>
+            <h1 class="header-title">SHERAP'S HOME MADE KITCHENETTE LAMBAKIN</h1>
+            </div>
+        </header>
+        <div class="custom-ad">
+            <a href="https://your-ad-link.com" target="_blank">
+                <img src="your-ad-image.jpg" alt="Advertisement">
+            </a>
+        </div>
+        <div class="grid-container">  
+            <div class="grid-item">
+                <img src="./pictureshome/1.jpg" alt="Chef Cutting Fish">
+            </div>
+            <div class="grid-item">
+                <img src="./pictureshome/2.jpg" alt="Adding Ingredients">
+            </div>
+            <div class="grid-item">
+                <img src="./pictureshome/3.jpg" alt="Serving Sushi">
+            </div>
+            <button class="view-more-btn" onclick="toggleContent()">View More</button>
+        </div>  
+            <section class="recipey">
+                <div class="recipeyy">
+            <div class="recipe-gallery">
+                <div class="recipe">
+                    <img src="./pictureshome/SNACKS.jpg" alt="Healthy Dish">
+                    <button class="category">SNACKS</button>
+                </div>
+                <div class="recipe">
+                    <img src="./pictureshome/MEAL.jpg" alt="Bowls Dish">
+                    <button class="category">MEALS</button>
+                </div>
+                <div class="recipe">
+                    <img src="./pictureshome/DESSERT.jpg" alt="Most Popular">
+                    <button class="category">DESSERTS & BEVERAGES</button>
+                </div>
+                <div class="recipe">
+                    <img src="./picturesblog/main.jpg" alt="Vegetarian">
+                    <button class="category">MOST POPULAR</button>
+                </div>
+            </div>
+            <div class="filters">
+                <button onclick="location.href='./RECIPE.html'">ADOBO</button>
+                <button onclick="location.href='./RECIPE.html'">ADOBO</button>
+                <button onclick="location.href='./RECIPE.html'">ADOBO</button>
+                <button onclick="location.href='./RECIPE.html'">ADOBO</button>
+                <button onclick="location.href='./RECIPE.html'">ADOBO</button>
+                <button onclick="location.href='./RECIPE.html'">ADOBO</button>
+                <button onclick="location.href='./RECIPE.html'">ADOBO</button>
+            </div>
+            <div class="search-bar">
+           
+                <button onclick="openRecipeModal()">VIEW RECIPES</button>              
+            </div>
+     
+        
+              
+            
+        
+</div>
+    </div>
+    <div class="footeer">
+    <div class="containerr">
+        <div class="social-media">
+            <p>FOLLOW US</p>
+            <link rel="icon" href="favicon.ico">
+
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+            <div class="signup-container">
+                <h2>Signup</h2> <span>FOR CHATBOT</span>
+                <p></p>
+                <div class="form-group">
+                    <input type="email"id="email" placeholder="Email">
+                     <input type="password"id="password"placeholder="Password">
+                    <button id="signup-btn">GO</button>
+                </div>           
+            </div>
+            </div>
+            </div>
+         </section>
+        <div class="containerrr">
+            <div class="about-section">
+                <div class="text-content">
+                    <h2 class="gogo">HI!</h2>
+                     
+                    <p class="own">I'm Ralph Gomez Owner of Business of Sherap's Homemade Kitchenette Lambakin </p>
+                    <p class="intro">nice to meet you!</p>
+                    <p class="sabu"> proud Filipino food business owner serving homemade snacks, classic dishes, and sweet desserts. We offer a variety of comforting, flavorful, and proudly local treats made with love and passion from our kitchen to yours.</p>
+                   
+                    <!--sa learnmore is sa about us yan iibahin din yung style neto-->
+                    <button class="learn-more">LEARN MORE</button>
+                </div>
+                <div class="image-content">
+                    <img src="./pictureshome/owener.jpg" alt="OWN">
+                    <img src="./pictureshome/oweeener.jpg" alt="OWN">
+                </div>
+            </div>
+        </div>
+        <div class="containeaer">
+            <main class="blog-section">
+                <h2 class="section-title">The Latest & Greatest</h2>
+                <article class="blog-post">
+                    <img src="image1.jpg" alt="BLOGER">
+                    <div class="post-content">
+                        <p class="date"></p>
+                        <h3></h3>
+                        <p></p>
+                        <a href="#" class="read-more">Continue Reading</a>
+                    </div>
+                </article>
+                <article class="blog-post">
+                    <img src="image2.jpg" alt="BLOGER">
+                    <div class="post-content">
+                        <p class="date"></p>
+                        <h3></h3>
+                        <p></p>
+                        <a href="#" class="read-more">Continue Reading</a>
+                    </div>
+                </article>
+                <article class="blog-post">
+                    <img src="image3.jpg" alt="BLOGER">
+                    <div class="post-content">
+                        <p class="date"></p>
+                        <h3></h3>
+                        <p></p>
+                        <a href="#" class="read-more">Continue Reading</a>
+                    </div>
+                </article>
+            </main>
+            <aside class="sidebar">
+                <div class="freezer-meals">
+                    <img src="./picturesblog/main.jpg" alt="main">
+                </div>
+                <div class="recipe-collections">
+                    <h3>Recipe Collections</h3>
+                    <ul>
+                        <li><span></span></li>
+                        <li> <span></span></li>
+                        <li><span></span></li>
+                        <li><span></span></li>
+                        <li><span></span></li>
+                        <li><span></span></li>
+                    </ul>
+                </div>
+            </aside>    
+        </div>    
+       
+        <footer class="footer">
+           
+            <div class="footer-left">
+              <div class="contact-info">
+                <i class="fas fa-map-marker-alt"></i>
+                <p id="loc">BLk 15 Lot 52 Ph.2 North Ville 4 Brgy, Marilao, 3019 Bulacan PHILIPPHINES</p>
+              </div>
+              <div class="contact-info">
+                <i class="fas fa-phone-alt"></i>
+                <p class="tete">099292972952</p> 
+              </div>
+              <div class="contact-info">
+                <i class="fas fa-phone-alt"></i>
+                <p class="tete">09387043421</p> 
+              </div>
+              <div class="contact-info">
+                <i class="fas fa-envelope"></i>
+                <p class="rrr"><a href="./CONTACT.html" style="color: #4da6ff;">support@Business</a></p>
+              </div>
+            </div>
+          
+            <div class="footer-right">
+              <h3>About the Business</h3>
+              <p>At Sherap's Homemade Kitchenette Lambakin, we bring the warmth of home-cooked Filipino meals to your table. Our passion for authentic flavors, fresh ingredients, and traditional recipes is at the heart of everything we do.</p>
+            </div>
+          
+            <div class="comment-form-wrapper">
+                <div class="typing">Leave a Comment...</div>
+              <form action="#" class="form-comment">
+                <div>
+                  <label>Message</label>
+                  <textarea rows="3" class="textarea"></textarea>
+                </div>                       
+                <div>
+                  <label>Name</label>
+                  <input type="texts" class="nme">
+                </div>
+                <div>
+                  <label class="ei">Email</label>
+                  <input type="email" class="emil">
+                </div>
+                <button type="submit" class="post-comment" id="postCommentBtn">Post Comment</button>
+              </form>
+            </div>
+          
+            <div id="commentPopup" class="comment-popup">
+              <div class="popup-content">
+                <h2>Comment Submitted</h2>
+                <p>Your comment has been successfully posted!</p>
+                <a href="./viewmorecomments.html" target="_blank" class="view-comments-link">View Comments</a>
+                <button id="closePopupBtn" class="close-popup-btn">Close</button>
+              </div>
+            </div>
+          </footer>
+    
+        <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    </body>
+ 
+</html>

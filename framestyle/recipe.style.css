@@ -1,0 +1,766 @@
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+  
+.hidden {
+  display: none;
+}
+
+
+.scrollbar {
+max-height: 150px;
+overflow-y: auto;
+}
+body {
+display:flex;
+justify-content: center;
+align-items: center;
+
+flex-direction: column;
+justify-content: flex-start;
+background-color: white;
+}
+.bounce {
+font-size: 50px;
+font-weight: bold;
+color:white;
+text-shadow: 3px 3px 5px rgba(0,0,0,0.2);
+animation: bounce 1.5s infinite ease-in-out;
+margin-top: 100px;
+color: black;
+}
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+
+        transform: translateY(-20px);
+    }
+    
+}
+h1 {
+text-align: center;
+width:100%;
+color: black;
+
+
+
+}
+
+
+.custom-card {
+    background-color: beige;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0, 0.1);
+    padding: 1.25rem;
+    min-width: 300px;
+
+}
+.custom-flex {
+
+    display: flex;
+    justify-content: space-between;
+    color: blue;
+    font-size: 1.25rem;
+    margin-top: 1rem;
+}
+.custom-image {
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+}
+.flex {
+    display: flex;
+    justify-content: space-between;
+    color: #4b5563;
+    margin-top: 0.75rem;
+}
+.toggle_btn {
+    color: #3182ce;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+.toggle_btn:hover {
+    text-decoration: underline;
+    color: #2b6cb0;
+}
+.text {
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    color: #000;
+}
+.custom-button {
+    position: absolute;
+    left: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #2d3748;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 9999px;
+}
+.custom-buttonn {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #2d3748;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 9999px;
+}
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.header {
+    background: #fbb034;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+.content {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.content img {
+    width: 40%;
+    border-radius: 10px;
+}
+.text {
+    width: 60%;
+}
+.highlight {
+    background: #fbb034;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+.trending {
+    margin-top: 20px;
+}
+ .tre {
+    text-align: center;
+    text-decoration: underline;
+    font-family: 'Genty Sans';
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 75px;
+}
+.trending-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+.trending-item img {
+    width: 100px;
+    border-radius: 5px;
+}
+.containerr {
+    display: flex;
+    width 100%;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-top: -165px;
+}
+.left {
+    width: 50%;
+    padding-right: 20px;
+}
+.right {
+    width: 50%;
+}
+.banner {
+    background: #f4a12f;
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 50px;
+    clip-path: polygon(20% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%, 0% 60%);
+}
+.image {
+    width: 100%;
+}
+.title {
+    background: #ffcc00;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+    clip-path: polygon(0 0, 100% 0, 95% 50%, 100% 100%, 0 100%, 5% 50%);
+}
+.description {
+    font-size: 14px;
+    padding: 10px;
+}
+.recipes {
+    font-size: 16px;
+}
+.recipes h2 {
+    border-bottom: 2px solid black;
+    padding-bottom: 5px;
+}
+.recipe {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-top: 50px;
+}
+.recipe img {
+    width: 100px;
+    height: 100px;
+    margin-left: 10px;
+}
+.view {
+background-color: #6c3b5c;
+color: white;
+border: none;
+padding: 10px 20px;
+border-radius: 5px;
+cursor: pointer;
+margin-top: 20px;
+margin-left: 500px;
+}
+.nav-bar {
+    background-color: #fff;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    top: 0;
+    z-index: 1000;
+    margin-left: 855px;
+    margin-top: 13px;
+
+  }
+  
+  .tab {
+    color: #7d5473;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .tab:hover {
+    background-color: #e4a9c3;
+    color: #fff;
+  }
+  input[type="text"]{
+    border-radius: 6px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.1);
+    border-width: 1px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    flex-shrink: 0;
+    width: 200px;
+    position: relative;
+    color: white;
+    background-color: #333;
+ 
+  }
+  .search-form {
+    margin-left: 20px;
+  }
+  #rar {
+    margin-left: 21px;
+    margin-top: 15px;
+  }
+  .texts {
+    color: rgba(0, 0, 0, 0.5);
+    text-align: left;
+    font-family: "Roboto-Regular", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    position: relative;
+    flex: 1;
+  }
+  .containrer {
+    width: 100%;
+    max-width: 28rem;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+   margin-right: 1000px;
+}
+
+
+.heading {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FFB800;
+}
+
+.food-list {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+
+.food-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.food-image {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+.food-info {
+    flex-grow: 1;
+}
+
+
+.food-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #FFB800;
+}
+
+/* Food description */
+.food-description {
+    font-size: 0.875rem;
+    color: #4B4B4B;
+}
+
+.cta {
+    margin-top: 1.5rem;
+    text-align: center;
+    background-color: #2F9F6E;
+    color: #ffffff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+
+.cta-text {
+    font-weight: 600;
+}
+
+
+.cta-link {
+    text-decoration: underline;
+    color: #ffffff;
+    font-weight: bold;
+}
+ .containrraer {
+    width: 100%;
+    max-width: 28rem;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+   position: absolute;
+   margin-top: 1530px;
+}
+.containrrreaer {
+    width: 100%;
+    max-width: 28rem;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+   position: absolute;
+   margin-top: 1530px;
+   margin-left: 1000px;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #7d5473;
+    color: white;
+    width: 100%;
+}
+ .contaiqner {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 1rem;
+      gap: 2rem;
+      justify-content: center;
+    }
+
+    .left-section {
+      flex: 1;
+      min-width: 300px;
+      max-width: 500px;
+    }
+
+    .left-section iframe {
+      width: 100%;
+      height: 280px;
+      border-radius: 10px;
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+      margin-top: 1rem;
+      background: #fff;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .profile img {
+      width: 70px;
+      border-radius: 10px;
+      margin-right: 1rem;
+    }
+
+    .profile-info h3 {
+      margin: 0;
+      font-size: 1.1rem;
+    }
+
+    .profile-info p {
+      margin: 4px 0;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    .profile-info span {
+      color: red;
+      font-size: 0.85rem;
+    }
+
+    .right-section {
+      flex: 2;
+      min-width: 300px;
+      max-width: 600px;
+      margin-left: 50px;
+    }
+
+    .right-section h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 0.5rem;
+    }
+
+    .recipse {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #fff;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .recipse p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: #444;
+      flex: 1;
+     
+    }
+
+    .recipse img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-left: 1rem;
+    }
+    .left-section iframe {
+  width: 500px;
+  aspect-ratio: 16 / 9;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-left: -250px;
+  margin-top: 100px;
+}
+.blog {
+    margin-left: -70px;
+    color: blue;
+}
+.blog:hover {
+    color: green;
+    text-decoration: underline;
+}
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: -9px;
+    background-color: #333;
+    color: white;
+    font-family: Arial, sans-serif;
+    gap: 20px;
+    border-radius: 10px;;
+  }
+  
+  
+  .footer-left {
+    flex: 0;
+    min-width: 300px;
+    margin-top: 350px;
+  
+   
+  }
+  
+  .contact-info {
+    margin-bottom: 20px;
+  }
+  .footer p {
+    margin-top: -20px;
+    margin-left: 20px;
+  }
+  .contact-info i {
+    display: flex;
+    color: #4da6ff;
+  
+  }
+  .rrr {
+    margin-right: 100px;
+  }
+  .tete {
+    margin-right: 100px;
+  }
+  #loc {
+    font-size: 14px;
+    color: #bbb;
+    
+  }
+  
+  
+  .footer-right {
+    flex: 1;
+    min-width: 300px;
+    margin-top: 350px;
+    margin-right: 50px;
+  }
+  
+  .footer-right h3 {
+    color: #4da6ff;
+    margin-bottom: 10px;
+    font-size: 40px;
+  
+  }
+  
+  .footer-right p {
+    font-size: 14px;
+    color: #bbb;
+    line-height: 1.5;
+    margin-top: 20px;
+  }
+  
+  /* Comment Form */
+  .comment-form-wrapper {
+    flex: 1;
+    min-width: 300px;
+    background-color: #003c32;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #222;
+    padding-bottom: 80px;
+    margin-top: 5px;
+  }
+  
+  .form-title {
+    color: #fff;window.searchRecipes = function () {
+        const modal = document.getElementById("recipeModal");
+        const grid = document.getElementById("recipesGrid");
+    
+        if (!modal || !grid) return;
+    
+        // Inject the recipe content
+        grid.innerHTML = `
+            <header>
+                <h1>Recipe Finder</h1>
+                <input type="texts" placeholder="Search for a recipe...">
+            </header>
+    
+            <main>
+                <section class="related">
+                    <h2>Related</h2>
+                    <div class="recipe-container">
+                        <div class="recipe-card">
+                            <img src="cookie.jpg" alt="The Best Soft Chocolate Chip Cookies">
+                            <h3>The Best Soft Chocolate Chip...</h3>
+                            <p>364.7k ❤️</p>
+                        </div>
+                        <div class="recipe-card">
+                            <img src="chicken_breast.jpg" alt="Ridiculously Good Air Fryer Chicken Breast">
+                            <h3>Ridiculously Good Air Fryer Chicken Breast</h3>
+                            <p>7,649 ❤️</p>
+                        </div>
+                    </div>
+                </section>
+    
+                <section class="latest">
+                    <h2>Latest</h2>
+                    <div class="recipe-container">
+                        <div class="recipe-card">
+                            <img src="pasta.jpg" alt="Roasted Red Pepper Pasta">
+                            <h3>Roasted Red Pepper Pasta</h3>
+                            <p>25.0k ❤️</p>
+                        </div>
+                        <div class="recipe-card">
+                            <img src="shrimp_tacos.jpg" alt="Spicy Shrimp Tacos">
+                            <h3>Spicy Shrimp Tacos</h3>
+                            <p>174.2k ❤️</p>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        `;
+    
+        // Show the modal
+        modal.style.display = "block";
+    };
+    margin-bottom: 15px;
+  }
+  
+  .form-comment label {
+    display: block;
+    color: #fff;
+    margin-bottom: 5px;
+  }
+  
+  .textarea, .nme, .emil {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .textarea {
+    resize: vertical;
+  }
+  
+  button.post-comment {
+    background-color: #4da6ff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  button.post-comment:hover {
+    background-color: #3b8bcd;
+  }
+  
+
+  .comment-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .popup-content {
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .popup-content h2 {
+    margin-bottom: 15px;
+    color: #4da6ff;
+  }
+  
+  .popup-content p {
+    margin-bottom: 20px;
+  }
+  
+  .view-comments-link {
+    color: #4da6ff;
+    text-decoration: none;
+    margin-bottom: 20px;
+  }
+  
+  .view-comments-link:hover {
+    text-decoration: underline;
+  }
+  
+  .close-popup-btn {
+    background-color: #4da6ff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .close-popup-btn:hover {
+    background-color: #3b8bcd;
+  }
+  
+  
+  
+  .typing {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation: typing 3s steps(30) infinite, blinkCaret 0.75s step-end infinite;
+  
+  }
+  
+  @keyframes typing {
+    100% {
+        width: 20ch;
+    }
+  }
+  
+  @keyframes blinkCaret {
+    50% {
+        border-color: transparent;
+    }
+  }
+  

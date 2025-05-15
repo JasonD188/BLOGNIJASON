@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!-- para sa link na ginagamit mo -->
+     <link rel="stylesheet" href="./framestyle/CONTACT.style.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="./components/contact.js"></script>
+    
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+  emailjs.init({
+    publicKey: "sdHxXeGIziQnsj13s",
+  });
+})();
+</script>
+
+</head>
+<body ><!-- para sa style ng website-->
+    
+    <div class="nav-bar">
+      
+        <a href="./index.html" class="tab">HOME</a>
+        <a href="./indexrecipe.html" class="tab">RECIPE</a>
+        <a href="./aboutus.html" class="tab">ABOUT</a>
+        <a href="./CONTACT.html" class="tab">CONTACT</a>
+      
+</div>     
+  <form class="search-form">
+                        <input type="text" id="search" class="sets" name="search" placeholder="Search...">                 
+                    </form>
+                    <i class="fas fa-search"id="rar"></i>   
+    <div class="css">
+    <div class="my-class"> <!-- para sa style ng website-->
+         
+        <!-- ito ay content ng image or logo ng business -->
+        <div class="w-full md:w-1/2 flex justify-center"> <!-- para sa style ng website-->
+            <img src="./picturescontact/364210564_6220549031404366_8245677513559443798_n.jpg" alt="Team Image" class="rounded-lg shadow-md">
+
+
+           </div>
+        <!-- para sa contact ng form -->
+        <div class="w-full md:w-1/2"> <!-- para sa style ng website-->
+            <h2 class="contact">Contact Us</h2>
+
+            <form id = "myform"class="mt-4 space-y-4"> <!-- para sa style ng website-->
+                <div>
+                    <label class="set-text">Full Name</label>
+                    <input type="name" required maxlength="15" class="settexts"id="inputText">
+                </div>
+                <div>
+                    <label class="set-text">E-mail</label>
+                    <input type="email" class="settexts"id="inputt">
+                </div>
+                <div>
+                    <label class="set-text">Message</label>
+                    <textarea class="settexts" required></textarea>
+                </div>
+                <button type="submit" id="submit" class="send">SEND</button>
+
+            </form>
+            
+        </div>
+        
+ </div>
+ 
+        <!-- contact box about sa details sa pag contact -->
+        <div class="contact-details"id="contact-details"> <!-- para sa style ng website-->
+            <p class="cnt-details">contact</p>
+            <p class="texts">099292972952</p>
+            <p class="texts">09387043421</p>
+            <p class="cnt-details">located 📍</p>
+            <p class="texts">Northville 4, Lambakin, Marilao, Bulacan</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3857.922589982079!2d120.97362847492745!3d14.773390185733676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b3e2519ae91d%3A0xfac96b09e8ca40cc!2sSheRap&#39;s%20Home%20Made%20Kitchenette!5e0!3m2!1sen!2sph!4v1739608761942!5m2!1sen!2sph" 
+                    width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        
+    </div>
+    
+    <div class="discount-btn-wrapper">
+  <button class="discount-btn"onclick="togglePopup()">DISCOUNT</button>
+ 
+  <p class="typings">CONTACT US</p>
+  <div class="social-media">
+  
+    <link rel="icon" href="favicon.ico">
+
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#">
+        <i class="fab fa-facebook-messenger" style="font-size: 70px;"></i>
+    </a>
+</div>
+</div>
+
+    <footer class="footer">
+        
+           
+        <div class="footer-left">
+          <div class="contact-info">
+            <i class="fas fa-map-marker-alt"></i>
+            <p id="loc">BLk 15 Lot 52 Ph.2 North Ville 4 Brgy, Marilao, 3019 Bulacan PHILIPPHINES</p>
+          </div>
+          <div class="contact-info">
+            <i class="fas fa-phone-alt"></i>
+            <p class="tete">099292972952</p> 
+          </div>
+          <div class="contact-info">
+            <i class="fas fa-phone-alt"></i>
+            <p class="tete">09387043421</p> 
+          </div>
+          <div class="contact-info">
+            <i class="fas fa-envelope"></i>
+            <p class="rrr"><a href="./CONTACT.html" style="color: #4da6ff;">support@Business</a></p>
+          </div>
+        </div>
+      
+        <div class="footer-right">
+          <h3 class="abo">About the Business</h3>
+          <p>At Sherap's Homemade Kitchenette Lambakin, we bring the warmth of home-cooked Filipino meals to your table. Our passion for authentic flavors, fresh ingredients, and traditional recipes is at the heart of everything we do.</p>
+        </div>
+      
+        <div class="comment-form-wrapper">
+            <div class="typing">Leave a Comment...</div>
+          <form action="#" class="form-comment">
+            <div>
+              <label>Message</label>
+              <textarea rows="3" class="textarea"></textarea>
+            </div>                       
+            <div>
+              <label>Name</label>
+              <input type="texts" class="nme">
+            </div>
+            <div>
+              <label class="ei">Email</label>
+              <input type="email" class="emil">
+            </div>
+            <button type="submit" class="post-comment" id="postCommentBtn">Post Comment</button>
+          </form>
+        </div>
+      
+        <div id="commentPopup" class="comment-popup">
+          <div class="popup-content">
+            <h2>Comment Submitted</h2>
+            <p>Your comment has been successfully posted!</p>
+            <a href="./viewmorecomments.html" target="_blank" class="view-comments-link">View Comments</a>
+            <button id="closePopupBtn" class="close-popup-btn">Close</button>
+          </div>
+        </div>
+        <div class="popup-container" id="popup-container">
+  
+    <span class="close-btn" onclick="togglePopup()">&times;</span>
+   <div class="contai">
+        <div class="plan">
+            <h3>NO POSTEDLY MONTH</h3>
+            <div class="price">NO PRICE</div>
+            <div class="features">
+                <ul>
+                </ul>
+            </div>
+            <button class="choose-button">NOT AVALAIBLE</button>
+        </div>
+
+        <div class="plan">
+            <h3>NO POSTEDLY MONTH</h3>
+            <div class="price">NO PRICE</div>
+            <div class="features">
+                <ul>
+                </ul>
+            </div>
+            <button class="choose-button">NOT AVALAIBLE</button>
+        </div>
+
+        <div class="plan">
+            <h3>NO POSTEDLY MONTH</h3>
+            <div class="price">NO PRICE</div>
+            <div class="features">
+                <ul>
+
+                </ul>
+            </div>
+            <button class="choose-button">NOT AVALAIBLE</button>
+        </div>
+
+        <div class="plan">
+            <h3>NO POSTEDLY MONTH</h3>
+            <div class="price">NO PRICE</div>
+            <div class="features">
+                <ul>        
+                </ul>
+            </div>
+            <button class="choose-button">NOT AVALAIBLE</button>
+        </div>
+    </div>
+
+    <div class="navigation">
+        <button class="nav-button">PREV</button>
+        <button class="nav-button">NEXT</button>
+    </div>
+   
+  </div>
+
+      </footer>
+      
+</body>
+
+</html>

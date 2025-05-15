@@ -1,0 +1,533 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Comment System</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Roboto', Arial, sans-serif;
+            }
+
+            body {
+                background-color: #f5f5f5;
+                padding: 20px;
+            }
+
+            .container {
+                max-width: 800px;
+                margin: 0 auto;
+                background-color: white;
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+            }
+
+            .comment-form {
+                margin-bottom: 20px;
+            }
+
+            .input-group {
+                display: flex;
+                gap: 15px;
+                margin-bottom: 15px;
+            }
+
+            .input-field {
+                flex: 1;
+                padding: 10px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                font-size: 14px;
+            }
+
+            .comment-input {
+                width: 100%;
+                padding: 12px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                margin-bottom: 10px;
+                font-size: 14px;
+                resize: vertical;
+                min-height: 100px;
+            }
+
+            .submit-btn {
+                background-color: #1a73e8;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 14px;
+                transition: background-color 0.3s;
+            }
+
+            .submit-btn:hover {
+                background-color: #1557b0;
+            }
+
+            .comments-section {
+                margin-top: 20px;
+            }
+
+            .comment {
+                background-color: #f8f9fa;
+                border-radius: 4px;
+                padding: 15px;
+                margin-bottom: 15px;
+                border-left: 4px solid #1a73e8;
+            }
+
+            .comment-header {
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+            }
+
+            .user-avatar {
+                width: 32px;
+                height: 32px;
+                background-color: #1a73e8;
+                color: white;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 10px;
+                font-weight: bold;
+            }
+
+            .user-name {
+                font-weight: bold;
+                color: #202124;
+            }
+
+            .comment-time {
+                color: #5f6368;
+                font-size: 12px;
+                margin-left: auto;
+            }
+
+            .comment-content {
+                color: #202124;
+                line-height: 1.5;
+                margin-bottom: 10px;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                max-height: 500px;
+                overflow-y: auto;
+            }
+
+            .comment-actions {
+                display: flex;
+                gap: 15px;
+                margin-top: 10px;
+                padding-top: 10px;
+                border-top: 1px solid #eee;
+            }
+
+            .reply-btn {
+                background: none;
+                border: none;
+                color: #1a73e8;
+                cursor: pointer;
+                font-size: 14px;
+                padding: 5px 10px;
+            }
+
+            .reply-btn:hover {
+                text-decoration: underline;
+            }
+
+            .reactions {
+                display: flex;
+                gap: 5px;
+            }
+
+            .reaction-btn {
+                background: none;
+                border: 1px solid #ddd;
+                border-radius: 20px;
+                padding: 5px 10px;
+                cursor: pointer;
+                font-size: 14px;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+            }
+
+            .reaction-btn:hover {
+                background-color: #f1f3f4;
+            }
+
+            .reaction-btn:disabled {
+                opacity: 0.5;
+                cursor: not-allowed;
+                background-color: #f1f3f4;
+            }
+
+            .reaction-count {
+                color: #5f6368;
+                font-size: 12px;
+            }
+
+            .reply-form {
+                margin-top: 10px;
+                margin-left: 20px;
+                padding: 10px;
+                background-color: #f8f9fa;
+                border-radius: 4px;
+                display: none;
+            }
+
+            .replies {
+                margin-left: 20px;
+                margin-top: 10px;
+            }
+
+            .reply {
+                background-color: #f8f9fa;
+                border-radius: 4px;
+                padding: 10px;
+                margin-bottom: 10px;
+                border-left: 3px solid #1a73e8;
+            }
+
+            .reply-actions {
+                display: flex;
+                gap: 15px;
+                margin-top: 10px;
+                padding-top: 10px;
+                border-top: 1px solid #eee;
+            }
+
+            #viewAllBtn {
+                display: none;
+                margin-top: 10px;
+            }
+     .nav-bar {
+    flex-shrink: 0;
+    height: 80px;
+    position: absolute;
+    left: 800px;
+    top: 0px;
+  cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+    position: relative;
+    margin-top:1px;
+     background-color: #fff#f5f5f5;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+
+ 
+ 
+  }
+  .tab {
+  color: #7d5473;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin-top: -20px;
+}
+
+.tab:hover {
+  background-color: #e4a9c3;
+  color: #fff;
+}
+input[type="texts"]{
+  border-radius: 6px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.1);
+  border-width: 1px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  flex-shrink: 0;
+  width: 200px;
+  position: relative;
+  color: white;
+  background-color: #333;
+  position: absolute;
+  margin-top: -55px;
+  margin-left: 465px;
+  left: 800px;
+
+}
+.search-form {
+  margin-top: -15px;
+  margin-left: 20px;
+}
+#rar {
+  right: 11;
+font-size: 20px;;
+  
+  
+  
+}
+        </style>
+    </head>
+    <body>
+       <div class="nav-bar">
+                    <a href="./index.html" class="tab">HOME</a>
+                    <a href="./indexrecipe.html" class="tab">RECIPE</a>
+                    <a href="./aboutus.html" class="tab">ABOUT</a>
+                    <a href="./CONTACT.html" class="tab">CONTACT</a>
+                  
+            </div>     
+              <form class="search-form">
+                        <input type="texts" id="search" class="texts" name="search" placeholder="Search...">                 
+                    </form>
+                    
+        <div class="container">
+          <div class="comment-form">
+            <div class="input-group">
+              <input type="text" class="input-field" id="userName" placeholder="Your Name" required />
+              <input type="email" class="input-field" id="userEmail" placeholder="Your Gmail" required />
+            </div>
+            <textarea class="comment-input" id="commentInput" placeholder="Write your comment here..."></textarea>
+            <button class="submit-btn" onclick="addComment()">Post Comment</button>
+          </div>
+          <div class="comments-section" id="commentsSection"></div>
+          <button id="viewAllBtn" class="submit-btn" onclick="showAllComments()">View All Comments</button>
+        </div>
+      
+        <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+        <script>
+      const SUPABASE_URL = 'https://ypnxvddfxubgbqogxmuy.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inlwbnh2ZGRmeHViZ2Jxb2d4bXV5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQwOTAzNDIsImV4cCI6MjA1OTY2NjM0Mn0.J-ggygd9rFO8mSEMmJ7o_EasckNGUAXhoffGQKuEZEg';
+const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+const EMOJIS = ['👍', '❤️', '😂', '😮', '😢'];
+let allComments = [];
+let displayedComments = 1;
+let userReactions = {};
+
+
+async function addComment() {
+  const userName = document.getElementById('userName').value.trim();
+  const userEmail = document.getElementById('userEmail').value.trim();
+  const commentText = document.getElementById('commentInput').value.trim();
+
+  if (!userName || !userEmail || !commentText) {
+    alert('Please fill in all fields');
+    return;
+  }
+
+  const { error } = await supabase.from('comments').insert([
+    { user_name: userName, user_email: userEmail, comment_text: commentText }
+  ]);
+
+  if (error) {
+    alert('Error posting comment: ' + error.message);
+    return;
+  }
+
+
+  document.getElementById('userName').value = '';
+  document.getElementById('userEmail').value = '';
+  document.getElementById('commentInput').value = '';
+
+
+  loadComments();
+}
+
+
+async function loadComments() {
+  const { data, error } = await supabase.from('comments').select('*').order('created_at', { ascending: false });
+  if (error) {
+    alert('Error loading comments: ' + error.message);
+    return;
+  }
+
+  allComments = data;
+  const commentsSection = document.getElementById('commentsSection');
+  const viewAllBtn = document.getElementById('viewAllBtn');
+  commentsSection.innerHTML = '';
+
+  if (data.length > 0) {
+    for (let i = 0; i < Math.min(displayedComments, data.length); i++) {
+      await renderComment(data[i]);
+    }
+    viewAllBtn.style.display = data.length > displayedComments ? 'inline-block' : 'none';
+  }
+}
+
+
+async function renderComment(comment) {
+  const { data: replies } = await supabase
+    .from('replies')
+    .select('*')
+    .eq('comment_id', comment.id)
+    .order('created_at', { ascending: false });
+
+  const commentsSection = document.getElementById('commentsSection');
+  const commentDiv = document.createElement('div');
+  commentDiv.className = 'comment';
+  commentDiv.dataset.commentId = comment.id;
+
+  const userInitial = comment.user_name.charAt(0).toUpperCase();
+
+  commentDiv.innerHTML = `
+    <div class="comment-header">
+      <div class="user-avatar">${userInitial}</div>
+      <div class="user-name">${comment.user_name}</div>
+      <div class="comment-time">${new Date(comment.created_at).toLocaleString()}</div>
+    </div>
+    <div class="comment-content">${comment.comment_text}</div>
+    <div class="comment-actions">
+      <button class="reply-btn" onclick="showReplyForm(this)">Reply</button>
+      <div class="reactions">
+        ${EMOJIS.map(emoji => `
+          <button class="reaction-btn" onclick="addReaction(this, '${emoji}')" data-emoji="${emoji}">
+            ${emoji} <span class="reaction-count">0</span>
+          </button>
+        `).join('')}
+      </div>
+    </div>
+    <div class="reply-form">
+      <div class="input-group">
+        <input type="text" class="input-field reply-name" placeholder="Your Name">
+        <input type="email" class="input-field reply-email" placeholder="Your Gmail">
+      </div>
+      <textarea class="comment-input reply-input" placeholder="Write your reply here..."></textarea>
+      <button class="submit-btn" onclick="addReply(this)">Post Reply</button>
+    </div>
+    <div class="replies">
+      ${replies.map(reply => `
+        <div class="reply" data-comment-id="${comment.id}">
+          <div class="comment-header">
+            <div class="user-avatar">${reply.user_name.charAt(0).toUpperCase()}</div>
+            <div class="user-name">${reply.user_name}</div>
+            <div class="comment-time">${new Date(reply.created_at).toLocaleString()}</div>
+          </div>
+          <div class="comment-content">${reply.reply_text}</div>
+          <div class="reply-actions">
+            <div class="reactions">
+              ${EMOJIS.map(emoji => `
+                <button class="reaction-btn" onclick="addReaction(this, '${emoji}')" data-emoji="${emoji}">
+                  ${emoji} <span class="reaction-count">0</span>
+                </button>
+              `).join('')}
+            </div>
+          </div>
+        </div>
+      `).join('')}
+    </div>
+  `;
+
+  commentsSection.appendChild(commentDiv);
+}
+
+
+function showReplyForm(button) {
+  const replyForm = button.closest('.comment').querySelector('.reply-form');
+  replyForm.style.display = replyForm.style.display === 'none' ? 'block' : 'none';
+}
+
+
+async function addReply(button) {
+  const replyForm = button.parentElement;
+  const userName = replyForm.querySelector('.reply-name').value.trim();
+  const userEmail = replyForm.querySelector('.reply-email').value.trim();
+  const replyText = replyForm.querySelector('.reply-input').value.trim();
+  const commentId = button.closest('.comment').dataset.commentId;
+
+  if (!userName || !userEmail || !replyText) {
+    alert('Please fill in all fields');
+    return;
+  }
+
+  const { error } = await supabase.from('replies').insert([
+    { comment_id: commentId, user_name: userName, user_email: userEmail, reply_text: replyText }
+  ]);
+
+  if (error) {
+    alert('Error posting reply: ' + error.message);
+    return;
+  }
+
+  const repliesSection = replyForm.nextElementSibling;
+  const replyDiv = document.createElement('div');
+  replyDiv.className = 'reply';
+  replyDiv.dataset.commentId = commentId;
+
+  const userInitial = userName.charAt(0).toUpperCase();
+  replyDiv.innerHTML = `
+    <div class="comment-header">
+      <div class="user-avatar">${userInitial}</div>
+      <div class="user-name">${userName}</div>
+      <div class="comment-time">${new Date().toLocaleString()}</div>
+    </div>
+    <div class="comment-content">${replyText}</div>
+    <div class="reply-actions">
+      <div class="reactions">
+        ${EMOJIS.map(emoji => `
+          <button class="reaction-btn" onclick="addReaction(this, '${emoji}')" data-emoji="${emoji}">
+            ${emoji} <span class="reaction-count">0</span>
+          </button>
+        `).join('')}
+      </div>
+    </div>
+  `;
+  repliesSection.appendChild(replyDiv);
+
+  replyForm.querySelector('.reply-name').value = '';
+  replyForm.querySelector('.reply-email').value = '';
+  replyForm.querySelector('.reply-input').value = '';
+  replyForm.style.display = 'none';
+}
+
+
+function addReaction(button, emoji) {
+  const commentDiv = button.closest('.comment') || button.closest('.reply');
+  const commentId = commentDiv.dataset.commentId;
+
+  if (!userReactions[commentId]) {
+    userReactions[commentId] = { emoji: null, button: null };
+  }
+
+  const { emoji: oldEmoji, button: oldButton } = userReactions[commentId];
+
+  if (oldEmoji === emoji) return;
+
+
+  if (oldButton) {
+    const oldCountSpan = oldButton.querySelector('.reaction-count');
+    const oldCount = parseInt(oldCountSpan.textContent) || 0;
+    oldCountSpan.textContent = Math.max(0, oldCount - 1);
+  }
+
+
+  const newCountSpan = button.querySelector('.reaction-count');
+  const newCount = parseInt(newCountSpan.textContent) || 0;
+  newCountSpan.textContent = newCount + 1;
+
+
+  userReactions[commentId] = { emoji, button };
+}
+
+function showAllComments() {
+  displayedComments = allComments.length;
+  loadComments();
+}
+
+
+loadComments();
+
+        </script>
+      </body>
+      </html>
